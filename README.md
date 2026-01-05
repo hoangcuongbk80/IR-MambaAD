@@ -17,7 +17,7 @@ python run_quick_model_test.py
 IR-MambaAD/
 ├─ datasets/
 │  ├─ __init__.py
-│  ├─ InfraredAD.py        # Generic infrared dataset loader (radiometric-aware)
+│  ├─ InfraredAD.py        # Generic infrared dataset loader
 │  ├─ MulSenAD.py          # Multi-sensor (thermal + RGB) loader
 │  ├─ ThermoSolarPV.py     # PV thermal dataset loader with optional annotations
 │  ├─ transforms.py        # Dict-style data transforms (joint crop/flip, noise, normalize)
@@ -28,19 +28,19 @@ IR-MambaAD/
 │  ├─ ops.py               # Haar DWT / IDWT helpers
 │  ├─ mwfm.py              # Multi-scale Wavelet Feature Modulation (MWFM)
 │  ├─ encoder.py           # ResNet34-based encoder + Half-FPN
-│  ├─ mamba_ssm.py         # Prototype SelectiveSSM (naive, correct)
-│  ├─ hpg_mamba.py         # HPG-Mamba stage (projects tokens, predicts alpha, runs SSM)
+│  ├─ mamba_ssm.py         # SelectiveSSM
+│  ├─ hpg_mamba.py         # HPG-Mamba stage 
 │  ├─ decoder.py           # Cascaded decoder chaining HPG-Mamba stages
 │  ├─ model.py             # IRMambaAD top-level wiring MWFM->Encoder->Decoder
 │  └─ losses.py            # Reconstruction map loss helper
-├─ train.py                # Training script (recon mode implemented; pretrain stub provided)
-├─ test.py                 # Evaluation/inference script (saves maps, computes AUROC/AP)
+├─ train.py                # Training script
+├─ test.py                 # Evaluation/inference script
 ├─ run_quick_model_test.py # Quick forward-pass sanity check
 ├─ README.md               # This file
-└─ doc/overview.jpg        # Optional overview figure (placeholder)
+└─ doc/overview.png        # Overview figure
 ```
 
-Download datasets: MulSenAD, ThermoSolarPV, InfraredAD.
+Download datasets: [MulSenAD](https://huggingface.co/datasets/orgjy314159/MulSen_AD), [ThermoSolarPV](https://www.kaggle.com/datasets/pkdarabi/solarpanel), InfraredAD (send an email to the author).
 
 ```
 dataset_root/
