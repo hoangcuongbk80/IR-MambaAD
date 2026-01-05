@@ -1,5 +1,9 @@
 # IR-MambaAD
 
+<p align="center">
+  <img src="./doc/overview.jpg" width="900" alt="Overview">
+</p>
+
 ```bash
 git clone <your-repo-url> IR-MambaAD
 cd IR-MambaAD
@@ -8,8 +12,6 @@ source .venv/bin/activate
 pip install torch torchvision numpy scikit-learn imageio matplotlib
 python run_quick_model_test.py
 ````
-
-Repository layout (single block — copy/paste):
 
 ```
 IR-MambaAD/
@@ -38,38 +40,21 @@ IR-MambaAD/
 └─ doc/overview.jpg        # Optional overview figure (placeholder)
 ```
 
-Expected dataset formats (examples): For single-modality infrared datasets, arrange:
+Download datasets: MulSenAD, ThermoSolarPV, InfraredAD.
 
 ```
 dataset_root/
   images/
     train/
-    val/        # optional
+    val/        
     test/
-  masks/        # optional (binary masks with matching filenames)
+  masks/        
     train/
     val/
     test/
 ```
 
-For multi-sensor (MulSenAD-style) datasets, arrange:
-
-```
-dataset_root/
-  thermal/train/*.png
-  rgb/train/*.jpg
-  masks/train/*.png   # optional
-```
-
-For ThermoSolarPV the loader supports an annotation CSV/JSON with per-image panel bboxes/masks (see `datasets/ThermoSolarPV.py` docstring).
-
-Usage examples (single continuous block). Sanity check:
-
-```bash
-python run_quick_model_test.py
-```
-
-Training (reconstruction mode):
+Training:
 
 ```bash
 python train.py \
@@ -82,7 +67,7 @@ python train.py \
   --device cuda
 ```
 
-Important flags: `--data-root` (dataset root), `--exp-dir` (checkpoints/logs), `--mode` (`recon` or `pretrain` stub), `--resume` (path to checkpoint). The training script uses AMP on CUDA automatically. `pretrain` is a stub/hook — integrate your DINO/SSL pipeline if desired.
+Important flags: `--data-root` (dataset root), `--exp-dir` (checkpoints/logs), `--mode` (`recon` or `pretrain` stub), `--resume` (path to checkpoint). The training script uses AMP on CUDA automatically.
 
 Testing / evaluation:
 
