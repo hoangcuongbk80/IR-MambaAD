@@ -1,7 +1,7 @@
 # IR-MambaAD
 
 <p align="center">
-  <img src="./doc/overview.jpg" width="900" alt="overview">
+  <img src="./doc/overview.png" width="900" alt="overview">
 </p>
 
 ```bash
