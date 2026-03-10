@@ -40,7 +40,7 @@ IR-MambaAD/
 └─ doc/overview.png        # Overview figure
 ```
 
-Download datasets: [MulSenAD](https://huggingface.co/datasets/orgjy314159/MulSen_AD), [ThermoSolarPV](https://www.kaggle.com/datasets/pkdarabi/solarpanel), InfraredAD (send an email to the author).
+Download datasets: [MulSenAD](https://huggingface.co/datasets/orgjy314159/MulSen_AD), [ThermoSolarPV](https://www.kaggle.com/datasets/pkdarabi/solarpanel), [InfraredAD](https://drive.google.com/file/d/1R7EMDexb_5oaRFHnGXeHfbnvLcOUoW0N/view?usp=sharing).
 
 ```
 dataset_root/
