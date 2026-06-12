@@ -4,7 +4,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 **IR-MambaAD** addresses the problem of **multi-class unsupervised industrial anomaly detection (UIAD)** on infrared (IR) images. Unlike RGB-based methods, infrared images exhibit distinct spectral and textural properties that challenge standard feature extraction pipelines. IR-MambaAD tackles this by:
 
@@ -13,14 +13,14 @@
 - **Reconstructing normal features** with a High-Frequency Prior Guided Mamba Decoder (HPG-Mamba) that conditions state-space updates on wavelet-derived HF priors.
 - **Detecting anomalies** at inference time from reconstruction errors between input and reconstructed feature maps.
 
-
-## 🚀 Quick Start
-
-## 📋 Requirements
+## Requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+## Datasets
+
+Download datasets: [MulSenAD](https://huggingface.co/datasets/orgjy314159/MulSen_AD), [ThermoSolarPV](https://www.kaggle.com/datasets/pkdarabi/solarpanel), [InfraredAD](https://drive.google.com/file/d/1R7EMDexb_5oaRFHnGXeHfbnvLcOUoW0N/view?usp=sharing).
 
 ### Option 1 — Using Pretrained Models
 
