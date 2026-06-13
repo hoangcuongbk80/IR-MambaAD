@@ -50,14 +50,14 @@ python train_decoder.py
 
 ---
 
-## 📊 Evaluation
+## Evaluation
 
 ```bash
 python evaluate.py
 ```
 
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 IRMamba/
